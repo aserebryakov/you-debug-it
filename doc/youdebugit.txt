@@ -1,0 +1,94 @@
+*youdebugit.txt*    Version 0.1.0
+*youdebugit*
+
+Highlights unwanted whitespace and characters.
+
+==============================================================================
+CONTENTS                                                  *YouDebugItContents*
+
+    1. Introduction .... |YouDebugItIntroduction|
+    2. Installation .... |YouDebugItInstallation|
+    3. Usage ........... |YouDebugItUsage|
+    4. Contribution .... |YouDebugItContribution|
+    5. License ......... |YouDebugItLicense|
+    6. Changelog ....... |YouDebugItChangelog|
+    7. Credits ......... |YouDebugItCredits|
+
+==============================================================================
+1. Introduction                                       *YouDebugItIntroduction*
+
+you-debug-it highlights unwanted whitespace and characters.
+
+==============================================================================
+2. Installation                                       *YouDebugItInstallation*
+
+Pathogen:
+>
+    $ cd ~/.vim/bundle
+    $ git clone https://github.com/aserebryakov/you-debug-it.git
+<
+NeoBundle:
+>
+    NeoBundle 'aserebryakov/you-debug-it'
+<
+Without plugin manager:
+
+    Clone or download this repository and copy its contents to your ~/.vim/
+    directory.
+
+==============================================================================
+3. Usage                                                     *YouDebugItUsage*
+
+youdebugit automatically checks each opened file.
+
+Commands
+--------
+                                          *:YouDebugItStart* *:YouDebugItStop*
+                                                            *:YouDebugItClean*
+* :YouDebugItEnable     - enable plugin globally
+* :YouDebugItDisable    - disable plugin globally
+* :YouDebugItActivate   - enable plugin for current buffer
+
+Known issues                                            *YouDebugItKnownIssues*
+------------
+
+* YouDebugIt currently supports only languages that have '//' comments
+
+==============================================================================
+4. Contribution                                       *YouDebugItContribution*
+
+Source code and issues are hosted on GitHub:
+
+    https://github.com/aserebryakov/you-debug-it
+
+==============================================================================
+5. License                                                 *YouDebugItLicense*
+
+Copyright 2014 Alexander Serebryakov
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+==============================================================================
+6. Changelog                                             *YouDebugItChangelog*
+
+0.1.0
+
+* Initial version supporting only languages that have '//' comments
+
+==============================================================================
+7. Credits                                                 *YouDebugItCredits*
+
+* Alexander Serebryakov (original author)  https://github.com/aserebryakov
+
+==============================================================================
+# vim:tw=78:ts=8:ft=help:norl:
