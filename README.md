@@ -25,8 +25,6 @@ directory.
 Usage
 -----
 
-**you-debug-it** automatically checks each opened file.
-
 ##### Commands
 
 * `:YouDebugItStart`   - enables automatical insertion of comment tag into text

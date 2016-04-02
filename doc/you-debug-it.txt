@@ -1,5 +1,5 @@
-*youdebugit.txt*    Version 0.1.0
-*youdebugit*
+*you-debug-it.txt*    Version 0.1.0
+*you-debug-it*
 
 Highlights unwanted whitespace and characters.
 
@@ -39,15 +39,13 @@ Without plugin manager:
 ==============================================================================
 3. Usage                                                     *YouDebugItUsage*
 
-youdebugit automatically checks each opened file.
-
 Commands
 --------
                                           *:YouDebugItStart* *:YouDebugItStop*
                                                             *:YouDebugItClean*
-* :YouDebugItEnable     - enable plugin globally
-* :YouDebugItDisable    - disable plugin globally
-* :YouDebugItActivate   - enable plugin for current buffer
+* :YouDebugItStart  - enables automatical insertion of comment tag into text
+* :YouDebugItStop   - disables automatical insertion of comment tag into text
+* :YouDebugItClean  - deletes all the lines containing the tag
 
 Known issues                                            *YouDebugItKnownIssues*
 ------------
