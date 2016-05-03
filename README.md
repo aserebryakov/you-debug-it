@@ -50,6 +50,10 @@ Changelog
 
 * Initial version supporting only languages that have '//' comments
 
+#### 0.2.0
+
+* Added support for all languages where `commentstring` is defined
+
 Credits
 -------
 

@@ -47,11 +47,6 @@ Commands
 * :YouDebugItStop   - disables automatical insertion of comment tag into text
 * :YouDebugItClean  - deletes all the lines containing the tag
 
-Known issues                                            *YouDebugItKnownIssues*
-------------
-
-* YouDebugIt currently supports only languages that have '//' comments
-
 ==============================================================================
 4. Contribution                                       *YouDebugItContribution*
 
@@ -82,6 +77,10 @@ limitations under the License.
 0.1.0
 
 * Initial version supporting only languages that have '//' comments
+
+0.2.0
+
+* Added support for all languages where |commentstring| is defined
 
 ==============================================================================
 7. Credits                                                 *YouDebugItCredits*

@@ -18,7 +18,16 @@
 "Enter a debug mode in a current buffer
 function! YouDebugItStart()
   let b:youdebugit_active = 1
-  inoremap <CR> <Space>// YOU DEBUG IT<CR>
+
+  if !exists('b:youdebugit_tag')
+    call YouDebugItGenerateTag()
+  endif
+
+  if b:youdebugit_active == 0
+    return
+  endif
+
+  inoremap <CR> <ESC>:call YouDebugItInsertCommentTag()<CR>$a<CR>
 endfunction!
 
 
@@ -31,7 +40,27 @@ endfunction!
 
 "Leave a debug mode in a current buffer
 function! YouDebugItClean()
-  execute("g:// YOU DEBUG IT$:d")
+  execute("g:" . b:youdebugit_tag . ":d")
+endfunction!
+
+
+"Inserts comment tag into the line
+function! YouDebugItInsertCommentTag()
+  let l:line = getline(".")
+  call setline(".", l:line . b:youdebugit_tag)
+endfunction!
+
+
+"Generates tag
+function! YouDebugItGenerateTag()
+  if &commentstring == ''
+    let b:youdebugit_active = 0
+  endif
+
+  let b:youdebugit_tag = substitute(&commentstring,
+                                    \ '%s',
+                                    \ 'YOU DEBUG IT',
+                                    \ '')
 endfunction!
 
 
@@ -43,5 +72,4 @@ if !exists('g:youdebugit_plugin')
   command! YouDebugItStart call YouDebugItStart()
   command! YouDebugItStop call YouDebugItStop()
   command! YouDebugItClean call YouDebugItClean()
-
 endif
