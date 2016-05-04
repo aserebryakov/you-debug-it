@@ -57,6 +57,7 @@ Changelog
 #### 0.2.1
 
 * Fixed `YouDebugItClean` command in case of `commentstring=/*%s*/`
+* Fixed error in case `YouDebugItClean` is executed before `YouDebugItStart`
 
 Credits
 -------
