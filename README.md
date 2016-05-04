@@ -54,6 +54,10 @@ Changelog
 
 * Added support for all languages where `commentstring` is defined
 
+#### 0.2.1
+
+* Fixed `YouDebugItClean` command in case of `commentstring=/*%s*/`
+
 Credits
 -------
 

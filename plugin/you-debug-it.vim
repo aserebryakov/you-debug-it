@@ -40,7 +40,8 @@ endfunction!
 
 "Leave a debug mode in a current buffer
 function! YouDebugItClean()
-  execute("g:" . b:youdebugit_tag . ":d")
+  let l:escaped_tag = substitute(b:youdebugit_tag, '[\.\*\\]', '\\\0', 'g')
+  silent execute("g:" . l:escaped_tag . ":d")
 endfunction!
 
 
