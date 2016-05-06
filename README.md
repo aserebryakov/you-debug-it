@@ -59,6 +59,10 @@ Changelog
 * Fixed `YouDebugItClean` command in case of `commentstring=/*%s*/`
 * Fixed error in case `YouDebugItClean` is executed before `YouDebugItStart`
 
+#### 0.2.2
+
+* Fixed error on `<CR>` pressing when buffer is changed after plugin enabling
+
 Credits
 -------
 

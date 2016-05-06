@@ -27,14 +27,14 @@ function! YouDebugItStart()
     return
   endif
 
-  inoremap <CR> <ESC>:call YouDebugItInsertCommentTag()<CR>$a<CR>
+  inoremap <buffer> <CR> <ESC>:call YouDebugItInsertCommentTag()<CR>$a<CR>
 endfunction!
 
 
 "Leave a debug mode in a current buffer
 function! YouDebugItStop()
   let b:youdebugit_active = 0
-  iunmap <CR>
+  iunmap <buffer> <CR>
 endfunction!
 
 
