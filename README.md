@@ -62,6 +62,7 @@ Changelog
 #### 0.2.2
 
 * Fixed error on `<CR>` pressing when buffer is changed after plugin enabling
+* Fixed error in case `YouDebugItStop` is executed before `YouDebugItStart`
 
 Credits
 -------

@@ -33,8 +33,14 @@ endfunction!
 
 "Leave a debug mode in a current buffer
 function! YouDebugItStop()
-  let b:youdebugit_active = 0
-  iunmap <buffer> <CR>
+  if !exists('b:youdebugit_active')
+    return
+  endif
+
+  if (b:youdebugit_active == 1)
+    let b:youdebugit_active = 0
+    iunmap <buffer> <CR>
+  endif
 endfunction!
 
 

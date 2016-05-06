@@ -90,6 +90,7 @@ limitations under the License.
 0.2.2
 
 * Fixed error on <CR> pressing when buffer is changed after plugin enabling
+* Fixed error in case |YouDebugItStop| is executed before |YouDebugItStart|
 
 ==============================================================================
 7. Credits                                                 *YouDebugItCredits*
