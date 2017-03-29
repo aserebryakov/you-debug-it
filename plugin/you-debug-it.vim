@@ -55,6 +55,27 @@ function! YouDebugItClean()
 endfunction!
 
 
+"Find all lines that contain the comment tag in current buffer
+function! YouDebugItReviewStart()
+  if !exists('b:youdebugit_tag')
+    return
+  endif
+
+  let l:escaped_tag = substitute(b:youdebugit_tag, '[\.\*\\]', '\\\0', 'g')
+  silent execute("g:" . l:escaped_tag . ":" .
+    \ "laddexpr expand('%') . ':' . line('.') .  ':' . getline('.')")
+
+  silent execute("lopen")
+endfunction!
+
+
+"Find clean the location list and close the window
+function! YouDebugItReviewFinish()
+  silent execute("lexpr []")
+  silent execute("lclose")
+endfunction!
+
+
 "Inserts comment tag into the line
 function! YouDebugItInsertCommentTag()
   let l:line = getline(".")
@@ -79,8 +100,16 @@ endfunction!
 if !exists('g:youdebugit_plugin')
   let g:youdebugit_plugin = 1
 
+  "Defining auto commands
+  augroup youdebugit_auto_commands
+    autocmd!
+    autocmd BufReadPost,FileType * call YouDebugItGenerateTag()
+  augroup end
+
   "Defining plugin commands
   command! YouDebugItStart call YouDebugItStart()
   command! YouDebugItStop call YouDebugItStop()
   command! YouDebugItClean call YouDebugItClean()
+  command! YouDebugItReviewStart call YouDebugItReviewStart()
+  command! YouDebugItReviewFinish call YouDebugItReviewFinish()
 endif

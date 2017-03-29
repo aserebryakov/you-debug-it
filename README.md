@@ -27,9 +27,11 @@ Usage
 
 ##### Commands
 
-* `:YouDebugItStart`   - enables automatical insertion of comment tag into text
-* `:YouDebugItStop`    - disables automatical insertion of comment tag into text
-* `:YouDebugItClean`   - deletes all the lines containing the tag
+* `:YouDebugItStart`      - enables automatical insertion of comment tag into text
+* `:YouDebugItStop`       - disables automatical insertion of comment tag into text
+* `:YouDebugItClean`      - deletes all the lines containing the tag
+* `:YouDebugReviewStart`  - opens location list of tagged lines
+* `:YouDebugReviewFinish` - closes and clears location list of tagged lines
 
 Contribution
 ------------
@@ -63,6 +65,10 @@ Changelog
 
 * Fixed error on `<CR>` pressing when buffer is changed after plugin enabling
 * Fixed error in case `YouDebugItStop` is executed before `YouDebugItStart`
+
+#### 1.0.0
+
+* Added review functionality to simplify the debugging code handling
 
 Credits
 -------

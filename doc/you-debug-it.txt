@@ -1,7 +1,7 @@
-*you-debug-it.txt*    Version 0.1.0
+*you-debug-it.txt*    Version 1.0.0
 *you-debug-it*
 
-Highlights unwanted whitespace and characters.
+Helps to control your debug code.
 
 ==============================================================================
 CONTENTS                                                  *YouDebugItContents*
@@ -41,11 +41,15 @@ Without plugin manager:
 
 Commands
 --------
-                                          *:YouDebugItStart* *:YouDebugItStop*
-                                                            *:YouDebugItClean*
+                       *:YouDebugItStart* *:YouDebugItStop* *:YouDebugItClean*
+                            *:YouDebugItReviewStart* *:YouDebugItReviewFinish*
+
 * :YouDebugItStart  - enables automatical insertion of comment tag into text
 * :YouDebugItStop   - disables automatical insertion of comment tag into text
 * :YouDebugItClean  - deletes all the lines containing the tag
+* :YouDebugItClean      - deletes all the lines containing the tag
+* :YouDebugReviewStart  - opens location list of tagged lines
+* :YouDebugReviewFinish - closes and clears location list of tagged lines
 
 ==============================================================================
 4. Contribution                                       *YouDebugItContribution*
@@ -91,6 +95,10 @@ limitations under the License.
 
 * Fixed error on <CR> pressing when buffer is changed after plugin enabling
 * Fixed error in case |YouDebugItStop| is executed before |YouDebugItStart|
+
+1.0.0
+
+* Added review functionality to simplify the debugging code handling
 
 ==============================================================================
 7. Credits                                                 *YouDebugItCredits*
